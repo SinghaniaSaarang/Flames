@@ -17,7 +17,7 @@ submitbtn.addEventListener('click',(e)=>{
 
     setTimeout(()=>{
         flames(name1,name2);
-    },2500);
+    },1000);
 
     // output.innerHTML=`${getCommonLetters(name1,name2)}`;
 
@@ -31,11 +31,11 @@ function flames(name1,name2){
 
         for(let i=0;i<5;i++){
             let status=remaining%relationships.length;
-            relationships.slice(status,1);
+            relationships.splice(status-1,1);
         }
 
 
-        output.innerHTML=`${relationships[0]}`;
+        output.innerHTML=`<h1>${relationships[0]}</h1>`;
 
 
 }
