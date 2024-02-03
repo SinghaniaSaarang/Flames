@@ -7,8 +7,6 @@ submitbtn.addEventListener('click',(e)=>{
     output.innerHTML=`<img src="./loading.gif">`;
     console.log("button clicked");
 
-    // let name1 = document.getElementById('name1');
-    // let name2 = document.getElementById('name2');
     let name1 = document.getElementById('name1').value.toLowerCase().replace(/\s/g, '');
     let name2 = document.getElementById('name2').value.toLowerCase().replace(/\s/g, '');
 
@@ -18,8 +16,6 @@ submitbtn.addEventListener('click',(e)=>{
     setTimeout(()=>{
         flames(name1,name2);
     },1000);
-
-    // output.innerHTML=`${getCommonLetters(name1,name2)}`;
 
     
 });
@@ -41,18 +37,11 @@ function flames(name1,name2){
 }
 
 function getCommonLetters(str1, str2) {
-    // let commonLetters = [];
-    // for (let i = 0; i < str1.length; i++) {
-    //     if (str2.indexOf(str1[i]) !== -1) {
-    //         commonLetters.push(str1[i]);
-    //     }
-    // }
 
     let arr1=str1.split('');
     let arr2=str2.split('');
     let commonletters=[];
     for(let i=0;i<arr1.length;i++){
-        let matching=0;
         for(let j=0;j<arr2.length;j++){
             if(arr1[i]==arr2[j]){
                 commonletters.push(arr1[i]);
